@@ -1,3 +1,32 @@
+client.on("message", message => {
+    var prefix = "+";
+        if (message.author.id === client.user.id) return;
+        if (message.guild) {
+       let embed = new Discord.RichEmbed()
+        let args = message.content.split(' ').slice(1).join(' ');
+    if(message.content.split(' ')[0] == prefix + 'bc') {
+        if (!args[1]) {
+    message.channel.send("bc <message>");
+    return;
+    }
+            message.guild.members.forEach(m => {
+       if(!message.member.hasPermission('ADMINISTRATOR')) return;
+                m.send(args);
+            });
+            const AziRo = new Discord.RichEmbed()
+            .setAuthor(message.author.username, message.author.avatarURL)
+            .setTitle(':white_check_mark:| جاري ارسال رسالتك ') 
+            .addBlankField(true)
+            .addField(':hotsprings:| عدد الاعضاء المرسل لهم ', message.guild.memberCount , true)
+            .addField(':pencil:| الرسالة ', args)
+            .setColor('RANDOM')
+            message.channel.sendEmbed(AziRo);
+        }
+        } else {
+            return;
+        }
+    });
+
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "+";
@@ -8,7 +37,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Death Shop`,"http://twitch.tv/Death Shop")
+client.user.setGame(`ڙمۘــٰا̍نۨ ̨ڪــٰا̍ڣــﯧْۧــہ`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
@@ -266,7 +295,7 @@ client.on('message', async message => {
 let command = message.content.split(" ")[0];
      command = command.slice(prefix.length);
     let args = message.content.split(" ").slice(1);  //kinggamer حقوق الفا كودز و
-if(command === `unmute`) {2
+if(command === `unmute`) {2			  
   if(!message.member.hasPermission("MUTE_MEMBERS")) return message.channel.sendMessage("**You Donot HavePermission Mute_Members**").then(m => m.delete(5000));
 if(!message.guild.member(client.user).hasPermission("MUTE_MEMBERS")) return message.reply("**I donot Have Permission Mute_Members**").then(msg => msg.delete(6000))
  
