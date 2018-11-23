@@ -8,7 +8,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`ڙمۘــٰا̍نۨ ̨ڪــٰا̍ڣــﯧْۧــہ`,"http://twitch.tv/Death Shop")
+client.user.setGame(`ڪــٰا̍ڣــﯧْۧــہ ڙمۘــٰا̍نۨ `,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
