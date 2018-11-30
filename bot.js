@@ -1,5 +1,5 @@
   client.on("message", function(message) {
-	  var prefix = "$"
+	  var prefix = "+"
    if(message.content.startsWith(prefix + "rps")) {
     let messageArgs = message.content.split(" ").slice(1).join(" ");
     let messageRPS = message.content.split(" ").slice(2).join(" ");
