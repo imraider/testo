@@ -46,6 +46,25 @@ client.on("message", async message => {
  
       }
     });
+client.on('message', message => {
+    let prefix = '+';
+    
+    if(message.content.startsWith(prefix + 'getid')) {
+        let mentionned = message.mentions.users.first();
+            if(mentionned) {
+                var c = mentionned;
+            } else {
+                var c = message.author;
+            }
+                let embed = new Discord.RichEmbed()
+                    .setColor("RANDOM")
+                    .setTitle(`**[ ${c.id} ]**`);
+
+                    message.channel.sendEmbed(embed);
+
+    }
+});
+
 
 client.on('message', function(message) {
     if (message.content == "+clear") {
